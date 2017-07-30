@@ -3,7 +3,6 @@
 USER_ID=${LOCAL_USER_ID:-0}
 
 if [ $USER_ID != "0" ]; then
-    echo root:root | chpasswd
 	echo "Starting with UID : $USER_ID"
 	useradd --shell /bin/bash -u $USER_ID -o -c "" -m user
 	export HOME=/home/user
